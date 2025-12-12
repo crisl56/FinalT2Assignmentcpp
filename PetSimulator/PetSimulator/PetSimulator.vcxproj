@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Chance.h" />
     <ClInclude Include="Pet.h" />
     <ClInclude Include="PetFactory.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Chance.cpp" />
     <ClCompile Include="Pet.cpp" />
     <ClCompile Include="PetFactory.cpp" />
     <ClCompile Include="Source.cpp" />

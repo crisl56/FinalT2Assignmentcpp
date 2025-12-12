@@ -1,4 +1,5 @@
 #include "PetFactory.h"
+#include "Chance.h"
 
 PetFactory::~PetFactory()
 {
@@ -7,12 +8,25 @@ PetFactory::~PetFactory()
 		delete currentPetIteration;
 		currentPetIteration = nullptr;
 	}
+
+	// Delete self
+	delete sInstance;
+	sInstance = nullptr;
 }
 
-std::unique_ptr<PetFactory> PetFactory::GetInstance()
+PetFactory* PetFactory::sInstance = nullptr;
+
+PetFactory* PetFactory::GetInstance()
 {
-	return std::move(sInstance);
+	if (sInstance == nullptr) {
+		sInstance = new PetFactory();
+	}
+
+	return sInstance;
 }
+
+
+
 
 std::unique_ptr<Pet> PetFactory::CreatePet(string Name)
 {

@@ -25,8 +25,10 @@ void Pet::NamePet(string newPetName)
 	// set name to this new pet name
 
 	// see if pet likes it
-	int roll = rand() % 10;
 
+	//if () {
+
+	//}
 }
 
 void Pet::FeedPet()

@@ -2,6 +2,9 @@
 #include "Utils.h"
 #include "PetFactory.h"
 
+class Pet;
+class PetFactory;
+
 class Pet
 {
 	friend PetFactory;
@@ -52,5 +55,7 @@ private:
 
 	// Checks
 	void CheckMood();
+	void CheckCleanliness();
+	void RandomEvent();
 };
 

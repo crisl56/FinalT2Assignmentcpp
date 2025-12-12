@@ -8,7 +8,7 @@ class PetFactory {
 public:
 	~PetFactory();
 
-	static std::unique_ptr<PetFactory> GetInstance();
+	static PetFactory* GetInstance();
 
 	std::unique_ptr<Pet> CreatePet(string Name);
 	std::unique_ptr<Pet> CreatePet(string Name, int Speed);
@@ -17,7 +17,7 @@ public:
 	Pet* GetPet(int index);
 
 private:
-	static std::unique_ptr<PetFactory> sInstance;
+	static PetFactory* sInstance;
 
 	// NOTE: I am assuming that the first pet will always bet the player pet.
 	std::vector<Pet*> PetVector;
