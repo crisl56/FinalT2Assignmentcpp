@@ -25,9 +25,6 @@ PetFactory* PetFactory::GetInstance()
 	return sInstance;
 }
 
-
-
-
 std::unique_ptr<Pet> PetFactory::CreatePet(string Name)
 {
 	return CreatePet(Name, 0);
