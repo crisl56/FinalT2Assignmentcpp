@@ -9,6 +9,7 @@
 #define LOG_EMPTY_LN std::cout << std::endl
 
 #define string std::string
+#define uniquePtr<type> std::unique_ptr<type>
 
 // Input Below
 #define INPUT_WITH_ERROR(INPUT_TEXT, INPUT_VAR, ERROR_MESSAGE)\
