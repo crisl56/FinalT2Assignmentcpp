@@ -20,8 +20,11 @@ Pet::~Pet(){
 }
 
 // TODO: all of this lmao
-void Pet::NamePet()
+void Pet::NamePet(string newPetName)
 {
+	// set name to this new pet name
+
+
 }
 
 void Pet::FeedPet()
