@@ -11,6 +11,52 @@ class Pet
 public:
 	Pet() = delete;
 
+	// Enums for later
+	// Effects health of pet
+	enum Cleanliness {
+		Dirty = 1,
+		Clean,
+		Sparkling
+	};
+
+	// Effects how effective some activities are
+	enum  Mood {
+		Bad = 1,
+		Normal,
+		Excellent,
+	};
+
+
+	// Player Actions
+	void NamePet();
+	void FeedPet();
+	void HydratePet();
+	void CleanPet();
+	void RecreationPet();
+	void TrainPet();
+	void RestPet();
+
+	// Checks
+	bool CheckDead();
+	void CheckMood();
+	void CheckCleanliness();
+	void RandomEvent();
+	
+	// Getters
+	string GetName() const;
+	int GetEnergy() const;
+	int GetHealth() const;
+	int GetHunger() const;
+	int GetThirstiness() const;
+	int GetSpeed() const;
+	Mood GetMood() const;
+	Cleanliness GetCleanState() const;
+
+
+	// Setters
+	void SetSpeed(int newSpeed);
+
+
 private:
 	Pet(string petName);
 	Pet(string petName, int speed);
@@ -26,36 +72,12 @@ private:
 	int _thirstiness;
 
 	// Affects health of pet
-	enum Cleanliness {
-		Dirty = 1, 
-		Clean, 
-		Sparkling
-	};
-
 	Cleanliness _cleanPetState;
 
-	// Affects how effective some activities are
-	enum  Mood {
-		Bad = 1, 
-		Normal, 
-		Excellent,
-	};
 
 	Mood _currentMood;
 	int _speed;
 	
-	// Player Actions
-	void NamePet(string newPetName);
-	void FeedPet();
-	void HydratePet();
-	void CleanPet();
-	void RecreationPet();
-	void TrainPet();
-	void RestPet();
 
-	// Checks
-	void CheckMood();
-	void CheckCleanliness();
-	void RandomEvent();
 };
 

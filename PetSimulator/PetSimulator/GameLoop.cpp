@@ -24,13 +24,14 @@ void GameLoop::InitGame()
 	string inputName = _uiManagerPointer->AskString("Enter your pet's name");
 	_petPlayerPointer = PetFactory::GetInstance()->CreatePet(inputName);
 
-	_InputFunctionMap = { {InputType::Input_Key_1, std::bind(&Pet::FeedPet, _petPlayerPointer.get())},
+	_InputFunctionMap ={ //{ {InputType::Input_Key_1, std::bind( & Pet::FeedPet, _petPlayerPointer.get())}, {InputType::Input_Key_1, nullptr}};
+	{InputType::Input_Key_1, std::bind(&Pet::FeedPet, _petPlayerPointer.get())},
 	{InputType::Input_Key_2, std::bind(&Pet::HydratePet, _petPlayerPointer.get())},
 	{InputType::Input_Key_3, std::bind(&Pet::CleanPet, _petPlayerPointer.get())},
-	{InputType::Input_Key_4, std::bind(&Pet::SpendTimeWithPet, _petPlayerPointer.get())},
+	{InputType::Input_Key_4, std::bind(&Pet::RecreationPet, _petPlayerPointer.get())},
 	{InputType::Input_Key_5, std::bind(&Pet::TrainPet, _petPlayerPointer.get())},
-	{InputType::Input_Key_6, std::bind(&Pet::Rest, _petPlayerPointer.get())},
-	{InputType::Input_Key_7, std::bind(&Pet::NamePet, _petPlayerPointer.get())},
+	{InputType::Input_Key_6, std::bind(&Pet::RestPet, _petPlayerPointer.get())},
+	{InputType::Input_Key_7, std::bind(&Pet::NamePet, _petPlayerPointer.get())}, 
 	{InputType::Input_Key_8, std::bind(&GameLoop::HandleRaceOption, this)},
 	{InputType::Input_Key_9, nullptr},
 	{InputType::Input_Key_None, nullptr} };
@@ -66,7 +67,7 @@ void GameLoop::MainMenuLoop()
 
 void GameLoop::CheckPetDeath()
 {
-	if (_petPlayerPointer->GetIsDead())
+	if (_petPlayerPointer->CheckDead())
 	{
 		_uiManagerPointer->ShowPetDeadOptions(*_petPlayerPointer);
 

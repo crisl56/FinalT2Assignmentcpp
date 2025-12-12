@@ -83,8 +83,11 @@ void Race::GenerateCompetitors()
         string rivalName = "Racer " + std::to_string(i + 1);
         int rivalSpeed = GetRandomInt(5, 8);
 
+        // Note why can't you just change the speed when you create the pet?
+        // I think unique ptr is bad here unless you store it somewhere
         std::unique_ptr<Pet> rivalPointer = PetFactory::GetInstance()->CreatePet(rivalName, rivalSpeed);
 
+        // You could you totally do an unordered map
         switch (_currentRaceDifficulty)
         {
             case Difficulty::Easy:
@@ -111,6 +114,7 @@ int Race::CalculateTimeScore(int speed)
     {
         speed = 1;
     }
+
     float timeScore = (float)distance / (float)speed;
     return timeScore;
 }

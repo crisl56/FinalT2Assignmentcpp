@@ -1,65 +1,94 @@
-﻿  Pet.cpp
-  PetFactory.cpp
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7): error C2011: 'PetFactory': 'class' type redefinition
-  (compiling source file 'PetFactory.cpp')
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
+﻿  GameLoop.cpp
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
+  (compiling source file 'GameLoop.cpp')
   
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(4,14): error C2027: use of undefined type 'PetFactory'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(74,13): error C2440: 'initializing': cannot convert from 'InputType' to 'int'
+      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(74,13):
+      This conversion requires an explicit cast (static_cast, C-style cast or parenthesized function-style cast)
   
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(4,14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(7,34): error C2065: 'PetVector': undeclared identifier
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(7,32): error C2143: syntax error: missing ';' before ':'
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(7,43): error C2143: syntax error: missing ';' before ')'
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(8,3): error C2248: 'Pet::~Pet': cannot access private member declared in class 'Pet'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(60,1):
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(91,22): error C2440: 'initializing': cannot convert from 'InputType' to 'int'
+      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(91,22):
+      This conversion requires an explicit cast (static_cast, C-style cast or parenthesized function-style cast)
+  
+  Race.cpp
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(36,60): error C2397: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(36,60): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(41,59): error C2397: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(41,59): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(119,12): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Source.cpp
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
+  (compiling source file 'Source.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,27): error C2027: use of undefined type 'Race'
+  (compiling source file 'Source.cpp')
+      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(10,7):
+      see declaration of 'Race'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,27):
+      the template instantiation context (the oldest one first) is
+          C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(27,24):
+          see reference to class template instantiation 'std::unique_ptr<Race,std::default_delete<Race>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3352,92):
+          see reference to class template instantiation 'std::default_delete<Race>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3307,23):
+          while compiling class template member function 'void std::default_delete<Race>::operator ()(_Ty *) noexcept const'
+          with
+          [
+              _Ty=Race
+          ]
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3427,33):
+              see the first reference to 'std::default_delete<Race>::operator ()' in 'std::unique_ptr<Race,std::default_delete<Race>>::~unique_ptr'
+              C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(33,1):
+              see the first reference to 'std::unique_ptr<Race,std::default_delete<Race>>::~unique_ptr' in 'GameLoop::~GameLoop'
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,25): error C2338: static_assert failed: 'can't delete an incomplete type'
+  (compiling source file 'Source.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9): warning C4150: deletion of pointer to incomplete type 'Race'; no destructor called
+  (compiling source file 'Source.cpp')
+      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(10,7):
+      see declaration of 'Race'
+  
+  UIManager.cpp
+C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
+  (compiling source file 'UIManager.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9): error C2248: 'Pet::~Pet': cannot access private member declared in class 'Pet'
+  (compiling source file 'UIManager.cpp')
+      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(82,1):
       compiler has generated 'Pet::~Pet' here
       C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(8,7):
       see declaration of 'Pet'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9):
+      the template instantiation context (the oldest one first) is
+          C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.h(45,34):
+          see reference to class template instantiation 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(1514,10):
+          while compiling class template member function 'void std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::_Tidy(void) noexcept'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(1061,14):
+              see the first reference to 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::_Tidy' in 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::~list'
+              C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.h(32,10):
+              see the first reference to 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::~list' in 'Race::~Race'
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(1518,16):
+          see reference to class template instantiation 'std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>' being compiled
+          with
+          [
+              _Ty=std::unique_ptr<Pet,std::default_delete<Pet>>,
+              _Alloc=std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(291,17):
+          see reference to class template instantiation 'std::unique_ptr<Pet,std::default_delete<Pet>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3352,92):
+          see reference to class template instantiation 'std::default_delete<Pet>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3307,23):
+          while compiling class template member function 'void std::default_delete<Pet>::operator ()(_Ty *) noexcept const'
+          with
+          [
+              _Ty=Pet
+          ]
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3427,33):
+              see the first reference to 'std::default_delete<Pet>::operator ()' in 'std::unique_ptr<Pet,std::default_delete<Pet>>::~unique_ptr'
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3483,1):
+              see the first reference to 'std::unique_ptr<Pet,std::default_delete<Pet>>::~unique_ptr' in 'std::unique_ptr<Pet,std::default_delete<Pet>>::~unique_ptr'
   
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(13,9): error C2065: 'sInstance': undeclared identifier
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(13,2): error C2541: 'delete': cannot delete objects that are not pointers
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(14,2): error C2065: 'sInstance': undeclared identifier
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(15,1): warning C4508: '{dtor}': function should return a value; 'void' return type assumed
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(17,25): error C2027: use of undefined type 'PetFactory'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(19,25): error C2027: use of undefined type 'PetFactory'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(22,29): error C2027: use of undefined type 'PetFactory'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(31,34): error C2027: use of undefined type 'PetFactory'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(33,9): error C2660: 'CreatePet': function does not take 2 arguments
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(31,34):
-      see declaration of 'CreatePet'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(33,9):
-      while trying to match the argument list '(std::string, int)'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(36,34): error C2027: use of undefined type 'PetFactory'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(38,23): error C2248: 'Pet::Pet': cannot access private member declared in class 'Pet'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(16,2):
-      see declaration of 'Pet::Pet'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(8,7):
-      see declaration of 'Pet'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(40,2): error C2065: 'PetVector': undeclared identifier
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(46,18): error C2027: use of undefined type 'PetFactory'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.h(7,7):
-      see declaration of 'PetFactory'
-  
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(49,6): error C2065: 'PetVector': undeclared identifier
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(54,9): error C2065: 'PetVector': undeclared identifier
   Generating Code...

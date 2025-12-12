@@ -1,8 +1,7 @@
+#pragma once
 #include "Utils.h"
 #include <vector>
 #include "Pet.h"
-
-class Pet;
 
 class PetFactory {
 public:

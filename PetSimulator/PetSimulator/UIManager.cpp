@@ -18,10 +18,10 @@ void UIManager::ShowTitle()
 void UIManager::ShowPetStats(const Pet& _pet)
 {
 	LOG_LN("\n=================================== \n" << 
-		   _pet.GetName() << "'s Stats\n" <<
+		     _pet.GetName() << "'s Stats\n" <<
 	         "===================================" <<
 			 "Energy      :" << _pet.GetEnergy()     << "\n" <<
-			 "Dirtiness   :" << _pet.GetDirtiness()  << "\n" <<
+			 "Dirtiness   :" << _pet.GetCleanState()  << "\n" <<
 			 "Health      :" << _pet.GetHealth()     << "\n" <<
 			 "Hunger      :" << _pet.GetHunger()     << "\n" <<
 			 "Thirstiness :" << _pet.GetThirstiness() << "\n" <<
@@ -140,6 +140,7 @@ InputType UIManager::AskInt(const string& message, int min, int max)
 	InputAction CurrentInputAction;
 	std::cin >> (CurrentInputAction);
 	return CurrentInputAction.mInputKey;
+
 	/*while (true)
 	{
 		LOG_LN(message);

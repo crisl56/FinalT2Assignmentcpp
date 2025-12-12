@@ -20,8 +20,10 @@ Pet::~Pet(){
 }
 
 // TODO: all of this lmao
-void Pet::NamePet(string newPetName)
+void Pet::NamePet()
 {
+	// ask for a pet name -> uimanager
+
 	// set name to this new pet name
 
 	// see if pet likes it
