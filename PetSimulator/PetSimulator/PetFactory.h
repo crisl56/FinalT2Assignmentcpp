@@ -10,8 +10,8 @@ public:
 
 	static std::unique_ptr<PetFactory> GetInstance();
 
-	void CreatePet(string Name);
-	void CreatePet(string Name, int Speed);
+	std::unique_ptr<Pet> CreatePet(string Name);
+	std::unique_ptr<Pet> CreatePet(string Name, int Speed);
 	
 	// Getter and setters
 	Pet* GetPet(int index);

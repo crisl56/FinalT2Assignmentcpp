@@ -14,16 +14,19 @@ std::unique_ptr<PetFactory> PetFactory::GetInstance()
 	return std::move(sInstance);
 }
 
-void PetFactory::CreatePet(string Name)
+std::unique_ptr<Pet> PetFactory::CreatePet(string Name)
 {
-	CreatePet(Name, 0);
+	return CreatePet(Name, 0);
 }
 
-void PetFactory::CreatePet(string Name, int Speed)
+std::unique_ptr<Pet> PetFactory::CreatePet(string Name, int Speed)
 {
 	Pet* newPet = new Pet(Name, Speed);
 
 	PetVector.push_back(newPet);
+
+	// Not sure if this works
+	return std::move(std::make_unique<Pet>(*newPet));
 }
 
 Pet* PetFactory::GetPet(int index)

@@ -41,13 +41,16 @@ private:
 	Mood _currentMood;
 	int _speed;
 	
-	// Functions
-	void NamePet();
+	// Player Actions
+	void NamePet(string newPetName);
 	void FeedPet();
 	void HydratePet();
 	void CleanPet();
 	void RecreationPet();
 	void TrainPet();
 	void RestPet();
+
+	// Checks
+	void CheckMood();
 };
 
