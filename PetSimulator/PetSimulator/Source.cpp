@@ -1,4 +1,5 @@
 # include "Utils.h"
+#include "GameLoop.h"
 
 // ==============================================================
 // Pet simulator
@@ -8,6 +9,7 @@
 // ==============================================================
 
 int main() {
-	// hello worlddddddddddd
-
+	GameLoop game;
+	game.Run();
+	return 0;
 }

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <limits>
 #include <random>
+#include <string>
 
 #define LOG(X) std::cout << X
 #define LOG_LN(X) std::cout << X << std::endl
