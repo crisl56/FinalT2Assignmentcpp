@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="GameLoop.h" />
+    <ClInclude Include="InputAction.h" />
     <ClInclude Include="Race.h" />
     <ClInclude Include="UIManager.h" />
     <ClInclude Include="Utils.h" />

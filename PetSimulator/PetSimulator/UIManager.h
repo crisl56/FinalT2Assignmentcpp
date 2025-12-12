@@ -1,5 +1,6 @@
 #pragma once
 #include "Utils.h"
+#include "InputAction.h"
 
 class Race;
 class Pet;
@@ -15,7 +16,7 @@ public:
 	void ShowPetDeadOptions(const Pet& _pet);
 
 	string AskString(const string& message);
-	int AskInt(const string& message, int min, int max);
+	InputType AskInt(const string& message, int min, int max);
 
 	void ClearConsole();
 	void PressToContinue();

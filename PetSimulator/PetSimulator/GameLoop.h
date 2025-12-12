@@ -1,5 +1,7 @@
 #pragma once
 #include <memory>
+#include <unordered_map>
+#include "InputAction.h"
 #include <functional>
 
 class Pet;
@@ -24,7 +26,7 @@ private:
 	std::unique_ptr<Pet> _petPlayerPointer;
 	std::unique_ptr<Race> _race;
 
-	MenuActionSignature _menuAction;
+	std::unordered_map<InputType, MenuActionSignature> _InputFunctionMap;
 
 	void CheckPetDeath();
 	void HandleRaceOption();

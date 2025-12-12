@@ -133,12 +133,14 @@ string UIManager::AskString(const string& message)
 	}
 }
 
-int UIManager::AskInt(const string& message, int min, int max)
+InputType UIManager::AskInt(const string& message, int min, int max)
 {
 	string input;
 	int value = 0;
-
-	while (true)
+	InputAction CurrentInputAction;
+	std::cin >> (CurrentInputAction);
+	return CurrentInputAction.mInputKey;
+	/*while (true)
 	{
 		LOG_LN(message);
 		std::getline(std::cin, input);
@@ -157,7 +159,7 @@ int UIManager::AskInt(const string& message, int min, int max)
 		{
 			LOG_LN("Invalid number, try again.\n");
 		}
-	}
+	}*/
 }
 
 void UIManager::PressToContinue()

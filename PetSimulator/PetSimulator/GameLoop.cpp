@@ -9,8 +9,7 @@ GameLoop::GameLoop() :
 	_isRunning(true),
 	_uiManagerPointer(std::make_unique<UIManager>()),
 	_petPlayerPointer(nullptr),
-	_race(nullptr),
-	_menuAction(nullptr)
+	_race(nullptr)
 {
 }
 
@@ -24,6 +23,17 @@ void GameLoop::InitGame()
 	_uiManagerPointer->ShowTitle();
 	string inputName = _uiManagerPointer->AskString("Enter your pet's name");
 	_petPlayerPointer = PetFactory::GetInstance()->CreatePet(inputName);
+
+	_InputFunctionMap = { {InputType::Input_Key_1, std::bind(&Pet::FeedPet, _petPlayerPointer.get())},
+	{InputType::Input_Key_2, std::bind(&Pet::HydratePet, _petPlayerPointer.get())},
+	{InputType::Input_Key_3, std::bind(&Pet::CleanPet, _petPlayerPointer.get())},
+	{InputType::Input_Key_4, std::bind(&Pet::SpendTimeWithPet, _petPlayerPointer.get())},
+	{InputType::Input_Key_5, std::bind(&Pet::TrainPet, _petPlayerPointer.get())},
+	{InputType::Input_Key_6, std::bind(&Pet::Rest, _petPlayerPointer.get())},
+	{InputType::Input_Key_7, std::bind(&Pet::NamePet, _petPlayerPointer.get())},
+	{InputType::Input_Key_8, std::bind(&GameLoop::HandleRaceOption, this)},
+	{InputType::Input_Key_9, nullptr},
+	{InputType::Input_Key_None, nullptr} };
 	MainMenuLoop();
 }
 
@@ -36,46 +46,16 @@ void GameLoop::MainMenuLoop()
 		_uiManagerPointer->ShowPetStats(*_petPlayerPointer);
 		_uiManagerPointer->ShowGameOptions(*_petPlayerPointer);
 
-		int inputMenu = _uiManagerPointer->AskInt("What would you like to do today?", 1, 9);
+		InputType inputMenu = _uiManagerPointer->AskInt("What would you like to do today?", 1, 9);
 
-		_menuAction = nullptr;
-
-		switch (inputMenu)
+		if (inputMenu == InputType::Input_Key_9)
 		{
-			case 1:
-				_menuAction = std::bind(&Pet::FeedPet, _petPlayerPointer.get());
-				break;
-			case 2:
-				_menuAction = std::bind(&Pet::HydratePet, _petPlayerPointer.get());
-				break;
-			case 3:
-				_menuAction = std::bind(&Pet::CleanPet, _petPlayerPointer.get());
-				break;
-			case 4:
-				_menuAction = std::bind(&Pet::SpendTimeWithPet, _petPlayerPointer.get());
-				break;
-			case 5:
-				_menuAction = std::bind(&Pet::TrainPet, _petPlayerPointer.get());
-				break;
-			case 6:
-				_menuAction = std::bind(&Pet::Rest, _petPlayerPointer.get());
-				break;
-			case 7:
-				_menuAction = std::bind(&Pet::NamePet, _petPlayerPointer.get());
-				break;
-			case 8:
-				_menuAction = std::bind(&GameLoop::HandleRaceOption, this);
-				break;
-			case 9:
-				_isRunning = false;
-				continue;
-			default:
-				break;
+			_isRunning = false;
+			continue;
 		}
-
-		if (_menuAction)
+		else if (inputMenu != InputType::Input_Key_None)
 		{
-			_menuAction();
+			_InputFunctionMap[inputMenu];
 		}
 
 		_uiManagerPointer->ClearConsole();
