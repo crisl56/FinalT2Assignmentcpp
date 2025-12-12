@@ -123,16 +123,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Chance.h" />
-    <ClInclude Include="Pet.h" />
-    <ClInclude Include="PetFactory.h" />
+    <ClInclude Include="GameLoop.h" />
+    <ClInclude Include="InputAction.h" />
+    <ClInclude Include="Race.h" />
+    <ClInclude Include="UIManager.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chance.cpp" />
-    <ClCompile Include="Pet.cpp" />
-    <ClCompile Include="PetFactory.cpp" />
+    <ClCompile Include="GameLoop.cpp" />
+    <ClCompile Include="Race.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="UIManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
