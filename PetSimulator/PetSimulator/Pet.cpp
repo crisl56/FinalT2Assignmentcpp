@@ -1,4 +1,6 @@
+#pragma once
 #include "Pet.h"
+#include "RandomChance.h"
 
 // This constructer just does the other constructor but has speed defaulted to 0
 Pet::Pet(string petName) : Pet(petName, 0) {}
@@ -55,4 +57,36 @@ void Pet::TrainPet()
 
 void Pet::RestPet()
 {
+	// UI manage somehow yea
 }
+
+bool Pet::CheckDead()
+{
+	// Pet has 25% chance of dying when health is 0
+	if (_health >= 10 || RandomChance.Probability(25)) return true;
+
+	// Pet just dies at 0
+	if (_health >= 0) return true;
+
+	// no
+	return false;
+}
+
+void Pet::CheckMood()
+{
+	if (_currentMood != Mood::Bad) return;
+
+
+}
+
+void Pet::CheckCleanliness()
+{
+
+}
+
+
+void Pet::SetSpeed(int newSpeed)
+{
+	_speed = newSpeed;
+}
+
