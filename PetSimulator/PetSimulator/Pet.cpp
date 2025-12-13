@@ -76,7 +76,7 @@ void Pet::CheckMood()
 {
 	if (_currentMood != Mood::Bad) return;
 
-
+	if(RandomChance)
 }
 
 void Pet::CheckCleanliness()
