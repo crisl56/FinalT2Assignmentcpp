@@ -1,8 +1,21 @@
 #include <vector>
+#include <format>
 #include "Utils.h"
 #include "UIManager.h"
 #include "Pet.h"
 #include "Race.h"
+
+// Singleton Pattern
+std::shared_ptr<UIManager> UIManager::sInstance = nullptr;
+
+std::shared_ptr<UIManager> UIManager::GetInstance() {
+	if (sInstance != nullptr) {
+		return sInstance;
+	}
+
+	sInstance = std::make_shared<UIManager>();
+	return sInstance;
+}
 
 void UIManager::ShowTitle()
 {
@@ -168,5 +181,19 @@ void UIManager::PressToContinue()
 	LOG("Press anything to continue...");
 	string input;
 	std::getline(std::cin, input);
+}
+
+void UIManager::ShowPetActionDialogue(const std::vector<string>& dialogue)
+{
+	int randomIndex = rand() % dialogue.size();
+
+	// no formating so idk now
+	//string ToShow = std::format()
+
+	LOG_LN(dialogue[randomIndex]);
+
+	LOG_EMPTY_LN;
+
+	PressToContinue();
 }
 

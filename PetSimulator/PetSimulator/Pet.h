@@ -38,9 +38,9 @@ public:
 
 	// Checks
 	bool CheckDead();
-	void CheckMood();
+	bool CheckMood();
+	void CheckHealth();
 	void CheckCleanliness();
-	void RandomEvent();
 	
 	// Getters
 	string GetName() const;

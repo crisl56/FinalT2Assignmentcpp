@@ -3,6 +3,8 @@
 #include <vector>
 #include "Pet.h"
 
+class Pet;
+
 class PetFactory {
 public:
 	~PetFactory();

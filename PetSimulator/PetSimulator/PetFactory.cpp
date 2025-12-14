@@ -1,5 +1,4 @@
 #include "PetFactory.h"
-#include "Chance.h"
 
 PetFactory::~PetFactory()
 {

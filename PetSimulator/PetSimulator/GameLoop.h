@@ -22,7 +22,7 @@ public:
 
 private:
 	bool _isRunning;
-	std::unique_ptr<UIManager> _uiManagerPointer;
+	std::shared_ptr<UIManager> _uiManagerPointer;
 	std::unique_ptr<Pet> _petPlayerPointer;
 	std::unique_ptr<Race> _race;
 

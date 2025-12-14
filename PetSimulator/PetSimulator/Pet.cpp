@@ -1,5 +1,7 @@
 #pragma once
 #include "Pet.h"
+#include "UIManager.h"
+#include "PetDialogue.h"
 #include "RandomChance.h"
 
 // This constructer just does the other constructor but has speed defaulted to 0
@@ -60,25 +62,53 @@ void Pet::RestPet()
 	// UI manage somehow yea
 }
 
+// Returns true if dead false otherwise
 bool Pet::CheckDead()
 {
+	const int DeathProbability = 25;
+
 	// Pet has 25% chance of dying when health is 0
-	if (_health >= 10 || RandomChance.Probability(25)) return true;
+	if (_health == 0 && RandomChance::Probability(DeathProbability)) return true;
 
 	// Pet just dies at 0
 	if (_health >= 0) return true;
 
-	// no
+	// not dead
 	return false;
 }
 
-void Pet::CheckMood()
+// Returns true if ranaway false otherwise
+bool Pet::CheckMood()
 {
-	if (_currentMood != Mood::Bad) return;
+	const int RunawayProbability = 25;
 
-	if(RandomChance)
+	if (_currentMood != Mood::Bad) return false;
+
+	if (RandomChance::Probability(RunawayProbability)) {
+		return true;
+	}
+
+	return false;
 }
 
+void Pet::CheckHealth()
+{
+	const int unHealthStatsThreshold = 20;
+	const int HealthDecrease = 10;
+
+	if (_hunger >= unHealthStatsThreshold || _thirstiness >= unHealthStatsThreshold) {
+		return;
+	}
+
+	// Play Message here for unhealthy pet
+	UIManager::GetInstance()->ShowPetActionDialogue(PetDialogue::unHealthyDialogue);
+
+	_health -= HealthDecrease;
+
+
+}
+
+// Check if clean and if not decreases health
 void Pet::CheckCleanliness()
 {
 

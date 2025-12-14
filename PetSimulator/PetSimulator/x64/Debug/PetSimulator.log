@@ -1,82 +1,30 @@
 ﻿  GameLoop.cpp
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
   (compiling source file 'GameLoop.cpp')
   
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(74,13): error C2440: 'initializing': cannot convert from 'InputType' to 'int'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(74,13):
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(74,13): error C2440: 'initializing': cannot convert from 'InputType' to 'int'
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(74,13):
       This conversion requires an explicit cast (static_cast, C-style cast or parenthesized function-style cast)
   
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(91,22): error C2440: 'initializing': cannot convert from 'InputType' to 'int'
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(91,22):
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(91,22): error C2440: 'initializing': cannot convert from 'InputType' to 'int'
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.cpp(91,22):
       This conversion requires an explicit cast (static_cast, C-style cast or parenthesized function-style cast)
   
-  Race.cpp
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(36,60): error C2397: conversion from 'int' to 'float' requires a narrowing conversion
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(36,60): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(41,59): error C2397: conversion from 'int' to 'float' requires a narrowing conversion
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(41,59): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(119,12): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-  Source.cpp
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
-  (compiling source file 'Source.cpp')
+  Pet.cpp
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\RandomChance.h(5,14): warning C4091: 'static ': ignored on left of 'RandomChance' when no variable is declared
+  (compiling source file 'Pet.cpp')
   
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,27): error C2027: use of undefined type 'Race'
-  (compiling source file 'Source.cpp')
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(10,7):
-      see declaration of 'Race'
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,27):
-      the template instantiation context (the oldest one first) is
-          C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(27,24):
-          see reference to class template instantiation 'std::unique_ptr<Race,std::default_delete<Race>>' being compiled
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3352,92):
-          see reference to class template instantiation 'std::default_delete<Race>' being compiled
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3307,23):
-          while compiling class template member function 'void std::default_delete<Race>::operator ()(_Ty *) noexcept const'
-          with
-          [
-              _Ty=Race
-          ]
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3427,33):
-              see the first reference to 'std::default_delete<Race>::operator ()' in 'std::unique_ptr<Race,std::default_delete<Race>>::~unique_ptr'
-              C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(33,1):
-              see the first reference to 'std::unique_ptr<Race,std::default_delete<Race>>::~unique_ptr' in 'GameLoop::~GameLoop'
-  
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,25): error C2338: static_assert failed: 'can't delete an incomplete type'
-  (compiling source file 'Source.cpp')
-  
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9): warning C4150: deletion of pointer to incomplete type 'Race'; no destructor called
-  (compiling source file 'Source.cpp')
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(10,7):
-      see declaration of 'Race'
-  
-  UIManager.cpp
-C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
-  (compiling source file 'UIManager.cpp')
-  
+  PetDialogue.cpp
+  PetFactory.cpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9): error C2248: 'Pet::~Pet': cannot access private member declared in class 'Pet'
-  (compiling source file 'UIManager.cpp')
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(82,1):
+  (compiling source file 'PetFactory.cpp')
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(82,1):
       compiler has generated 'Pet::~Pet' here
-      C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(8,7):
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Pet.h(8,7):
       see declaration of 'Pet'
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9):
       the template instantiation context (the oldest one first) is
-          C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.h(45,34):
-          see reference to class template instantiation 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>' being compiled
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(1514,10):
-          while compiling class template member function 'void std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::_Tidy(void) noexcept'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(1061,14):
-              see the first reference to 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::_Tidy' in 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::~list'
-              C:\Users\pg29cris\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.h(32,10):
-              see the first reference to 'std::list<std::unique_ptr<Pet,std::default_delete<Pet>>,std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>>::~list' in 'Race::~Race'
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(1518,16):
-          see reference to class template instantiation 'std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>' being compiled
-          with
-          [
-              _Ty=std::unique_ptr<Pet,std::default_delete<Pet>>,
-              _Alloc=std::allocator<std::unique_ptr<Pet,std::default_delete<Pet>>>
-          ]
-          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\list(291,17):
+          C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(27,34):
           see reference to class template instantiation 'std::unique_ptr<Pet,std::default_delete<Pet>>' being compiled
           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3352,92):
           see reference to class template instantiation 'std::default_delete<Pet>' being compiled
@@ -88,7 +36,70 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.3520
           ]
               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3427,33):
               see the first reference to 'std::default_delete<Pet>::operator ()' in 'std::unique_ptr<Pet,std::default_delete<Pet>>::~unique_ptr'
-              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3483,1):
-              see the first reference to 'std::unique_ptr<Pet,std::default_delete<Pet>>::~unique_ptr' in 'std::unique_ptr<Pet,std::default_delete<Pet>>::~unique_ptr'
+              C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\PetFactory.cpp(29,2):
+              see the first reference to 'std::unique_ptr<Pet,std::default_delete<Pet>>::~unique_ptr' in 'PetFactory::CreatePet'
+  
+  Race.cpp
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(36,60): error C2397: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(36,60): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(41,59): error C2397: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(41,59): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\Race.cpp(119,12): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Source.cpp
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
+  (compiling source file 'Source.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,27): error C2027: use of undefined type 'Race'
+  (compiling source file 'Source.cpp')
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(10,7):
+      see declaration of 'Race'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,27):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(27,24):
+          see reference to class template instantiation 'std::unique_ptr<Race,std::default_delete<Race>>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3352,92):
+          see reference to class template instantiation 'std::default_delete<Race>' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3307,23):
+          while compiling class template member function 'void std::default_delete<Race>::operator ()(_Ty *) noexcept const'
+          with
+          [
+              _Ty=Race
+          ]
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3427,33):
+              see the first reference to 'std::default_delete<Race>::operator ()' in 'std::unique_ptr<Race,std::default_delete<Race>>::~unique_ptr'
+              C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(33,1):
+              see the first reference to 'std::unique_ptr<Race,std::default_delete<Race>>::~unique_ptr' in 'GameLoop::~GameLoop'
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3308,25): error C2338: static_assert failed: 'can't delete an incomplete type'
+  (compiling source file 'Source.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3309,9): warning C4150: deletion of pointer to incomplete type 'Race'; no destructor called
+  (compiling source file 'Source.cpp')
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\GameLoop.h(10,7):
+      see declaration of 'Race'
+  
+  UIManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\InputAction.h(37,19): warning C4553: '==': result of expression not used; did you intend '='?
+  (compiling source file 'UIManager.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61): error C2248: 'UIManager::UIManager': cannot access private member declared in class 'UIManager'
+  (compiling source file 'UIManager.cpp')
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\UIManager.h(32,2):
+      see declaration of 'UIManager::UIManager'
+      C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\UIManager.h(8,7):
+      see declaration of 'UIManager'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,61):
+      the template instantiation context (the oldest one first) is
+          C:\Users\Cris Laurence Odonel\Documents\GitHub\FinalT2Assignmentcpp\PetSimulator\PetSimulator\UIManager.cpp(16,19):
+          see reference to function template instantiation 'std::shared_ptr<UIManager> std::make_shared<UIManager,>(void)' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2913,46):
+          see reference to function template instantiation 'std::_Ref_count_obj2<UIManager>::_Ref_count_obj2<>(void)' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2100,18):
+          see reference to function template instantiation 'void std::_Construct_in_place<_Ty,>(_Ty &) noexcept(false)' being compiled
+          with
+          [
+              _Ty=UIManager
+          ]
   
   Generating Code...

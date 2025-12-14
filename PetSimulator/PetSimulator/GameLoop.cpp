@@ -7,7 +7,7 @@
 
 GameLoop::GameLoop() : 
 	_isRunning(true),
-	_uiManagerPointer(std::make_unique<UIManager>()),
+	_uiManagerPointer(UIManager::GetInstance()),
 	_petPlayerPointer(nullptr),
 	_race(nullptr)
 {
