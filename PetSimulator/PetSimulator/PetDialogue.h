@@ -6,6 +6,7 @@
 
 namespace PetDialogue
 {
+
 	extern const vector<string> nameHappyDialogue;
 	extern const vector<string> nameSadDialogue;
 
@@ -20,5 +21,7 @@ namespace PetDialogue
 	extern const vector<string> moodDialogue;
 	extern const vector<string> cleanlinessDialogue;
 	extern const vector<string> unHealthyDialogue;
+
+	extern const vector<string> failDialogue;
 };
 

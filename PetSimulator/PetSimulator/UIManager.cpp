@@ -112,7 +112,7 @@ void UIManager::ShowPetDeadOptions(const Pet& _pet)
 {
 	LOG_LN(
 		"===================================\n" <<
-		"------- Your pet is dead :( -------\n" <<
+		"------- Your pet is gone :( -------\n" <<
 		"===================================\n" <<
 		"-- Would you like to play again? --\n" <<
 		"===================================\n" <<
@@ -183,11 +183,21 @@ void UIManager::PressToContinue()
 	std::getline(std::cin, input);
 }
 
+string UIManager::AskPetName()
+{
+	LOG_LN("What would you like your pet's name to be?");
+	
+	string newPetName;
+	std::getline(std::cin, newPetName);
+
+	return newPetName;
+}
+
 void UIManager::ShowPetActionDialogue(const std::vector<string>& dialogue)
 {
 	int randomIndex = rand() % dialogue.size();
 
-	// no formating so idk now
+	// no formating so no pet name in dialogue unfortunately
 	//string ToShow = std::format()
 
 	LOG_LN(dialogue[randomIndex]);

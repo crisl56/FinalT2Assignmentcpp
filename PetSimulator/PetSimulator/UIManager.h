@@ -26,6 +26,7 @@ public:
 	void PressToContinue();
 
 	// Pet Stuff
+	string AskPetName();
 	void ShowPetActionDialogue(const std::vector<string>& dialogue);
 
 private:

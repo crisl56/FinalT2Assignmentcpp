@@ -4,6 +4,9 @@
 // Honeslty not sure if this is a good idea but since its just doing math I hope it is fine.
 static class RandomChance {
 public:
+
+	// Returns true if it hits that percentage
+	// Returns false if it doesn't
 	static bool Probability(int percentage ) {
 		std::random_device rd;
 

@@ -62,6 +62,8 @@ private:
 	Pet(string petName, int speed);
 	~Pet();
 
+	void DecreaseEnergy();
+
 	// Variables
 	// Stats of pet
 	string _petName;
@@ -70,6 +72,9 @@ private:
 	int _health;
 	int _hunger;
 	int _thirstiness;
+
+	// Effectiveness levels
+	const int _actionEffectiveness[3] = {10,20,30};
 
 	// Affects health of pet
 	Cleanliness _cleanPetState;
