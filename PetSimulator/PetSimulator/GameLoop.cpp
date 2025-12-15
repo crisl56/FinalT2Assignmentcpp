@@ -65,6 +65,8 @@ void GameLoop::MainMenuLoop()
 			}
 		}
 
+		_uiManagerPointer->PressToContinue();
+
 		_uiManagerPointer->ClearConsole();
 
 		_petPlayerPointer->CheckCleanliness();
@@ -76,7 +78,7 @@ void GameLoop::MainMenuLoop()
 
 void GameLoop::CheckPetDeath()
 {
-	if (_petPlayerPointer->CheckDead() || _petPlayerPointer->CheckMood())
+	if (_petPlayerPointer->CheckDead() && _petPlayerPointer->CheckMood())
 	{
 		_uiManagerPointer->ShowPetDeadOptions(*_petPlayerPointer);
 

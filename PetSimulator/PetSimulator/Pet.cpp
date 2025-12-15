@@ -181,8 +181,7 @@ void Pet::TrainPet()
 	}
 
 	// Current mood multiples the speed increase
-	int newSpeed = _speed + _actionEffectiveness[randomIndex] * static_cast<int>(_currentMood);;
-	_speed = std::max(0, std::min(100, newSpeed));
+	_speed += _actionEffectiveness[randomIndex] * static_cast<int>(_currentMood);
 
 	ShowActions(PetDialogue::trainDialogue);
 	DecreaseEnergy();
@@ -206,11 +205,11 @@ bool Pet::CheckDead()
 {
 	const int DeathProbability = 25;
 
-	// Pet has 25% chance of dying when health is 0
-	if (_health == 0 && RandomChance::Probability(DeathProbability)) return true;
+	// Pet has 25% chance of dying when health is 20
+	if (_health <= 20 && RandomChance::Probability(DeathProbability)) return true;
 
 	// Pet just dies at 0
-	if (_health >= 0) return true;
+	if (_health <= 0) return true;
 
 	// not dead
 	return false;
@@ -291,14 +290,18 @@ int Pet::GetSpeed() const // I created the getspeed function since there wasn't 
 	return _speed;
 }
 
-Pet::Mood Pet::GetMood() const
+string Pet::GetMood() const
 {
-	return _currentMood;
+	string const moodStates[] = { "", "Bad", "Normal", "Excellent" };
+
+	return moodStates[static_cast<int>(_currentMood)];
 }
 
-Pet::Cleanliness Pet::GetCleanState() const
+string Pet::GetCleanState() const
 {
-	return _cleanPetState;
+	string const cleanStates[] = { "", "Dirty", "Clean", "Sparkling" };
+
+	return cleanStates[static_cast<int>(_cleanPetState)];
 }
 
 

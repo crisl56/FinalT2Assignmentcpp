@@ -50,8 +50,8 @@ public:
 	int GetHunger() const;
 	int GetThirstiness() const;
 	int GetSpeed() const;
-	Mood GetMood() const;
-	Cleanliness GetCleanState() const;
+	string GetMood() const;
+	string GetCleanState() const;
 
 
 	// Setters
