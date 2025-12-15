@@ -13,7 +13,7 @@ std::shared_ptr<UIManager> UIManager::GetInstance() {
 		return sInstance;
 	}
 
-	sInstance = std::shared_ptr<UIManager>(new UIManager()); // Change here 
+	sInstance = std::shared_ptr<UIManager>(new UIManager());
 	return sInstance;
 }
 
@@ -148,10 +148,10 @@ string UIManager::AskString(const string& message)
 
 InputType UIManager::AskMenuGameOption(const string& message, int min, int max)
 {
-	string input;
 	int value = 0;
 	InputAction CurrentInputAction;
 	std::cin >> (CurrentInputAction);
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	return CurrentInputAction.mInputKey;
 }
 
@@ -202,16 +202,9 @@ string UIManager::AskPetName()
 void UIManager::ShowPetActionDialogue(const std::vector<string>& dialogue)
 {
 	int randomIndex = rand() % dialogue.size();
-
-	// no formating so no pet name in dialogue unfortunately
-	//string ToShow = std::format()
-
 	LOG_LN(dialogue[randomIndex]);
-
 	LOG_EMPTY_LN;
-
-	PressToContinue();
 }
 
-UIManager::UIManager() = default; // Change here
+UIManager::UIManager() = default;
 

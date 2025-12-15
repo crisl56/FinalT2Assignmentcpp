@@ -23,9 +23,7 @@ Pet::Pet(string petName, int speed)
 {
 }
 
-Pet::~Pet(){
-	// Don't know yet tbh
-}
+Pet::~Pet() = default;
 
 void Pet::DecreaseEnergy()
 {

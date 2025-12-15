@@ -17,6 +17,8 @@ enum class InputType
 	Input_Key_None
 };
 
+// Handles the menu options, only for pet game options
+// Each Input has a certain enum type that represents the entry
 class InputAction
 {
 

@@ -5,13 +5,13 @@
 class Race;
 class Pet;
 
+// Singleton
 class UIManager
 {
 public:
-	// shared pointer singlton
-	// - note: i don't think we need a factory as we only really need 1 UI manager
 	static std::shared_ptr<UIManager> GetInstance();
 
+	// UI Showing functions
 	void ShowTitle();
 	void ShowPetStats(const Pet& _pet);
 	void ShowGameOptions(const Pet& _pet);
@@ -19,10 +19,10 @@ public:
 	void ShowRaceResults(const Race& race);
 	void ShowPetDeadOptions(const Pet& _pet);
 
+	// UI Input helpers
 	string AskString(const string& message);
 	InputType AskMenuGameOption(const string& message, int min, int max);
 	int AskInt(const string& message, int min, int max);
-
 	void ClearConsole();
 	void PressToContinue();
 
