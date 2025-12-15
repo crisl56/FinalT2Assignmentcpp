@@ -15,6 +15,7 @@ class GameLoop
 {
 public:
 	GameLoop();
+	~GameLoop();
 
 	void Run();
 	void InitGame();

@@ -13,6 +13,8 @@ GameLoop::GameLoop() :
 {
 }
 
+GameLoop::~GameLoop() = default; // Change Here
+
 void GameLoop::Run()
 {
 	InitGame();
@@ -47,16 +49,20 @@ void GameLoop::MainMenuLoop()
 		_uiManagerPointer->ShowPetStats(*_petPlayerPointer);
 		_uiManagerPointer->ShowGameOptions(*_petPlayerPointer);
 
-		InputType inputMenu = _uiManagerPointer->AskInt("What would you like to do today?", 1, 9);
+		InputType inputMenu = _uiManagerPointer->AskMenuGameOption("What would you like to do today?", 1, 9);
 
 		if (inputMenu == InputType::Input_Key_9)
 		{
 			_isRunning = false;
 			continue;
 		}
-		else if (inputMenu != InputType::Input_Key_None)
+		else if (inputMenu != InputType::Input_Key_None) // Change here
 		{
-			_InputFunctionMap[inputMenu];
+			auto it = _InputFunctionMap.find(inputMenu);
+			if (it != _InputFunctionMap.end() && it->second)
+			{
+				it->second();
+			}
 		}
 
 		_uiManagerPointer->ClearConsole();

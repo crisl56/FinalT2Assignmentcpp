@@ -10,6 +10,7 @@ class Pet
 	friend PetFactory;
 public:
 	Pet() = delete;
+	~Pet(); // Public destructor
 
 	// Enums for later
 	// Effects health of pet
@@ -60,7 +61,6 @@ public:
 private:
 	Pet(string petName);
 	Pet(string petName, int speed);
-	~Pet();
 
 	void DecreaseEnergy();
 

@@ -2,7 +2,7 @@
 #include <random>
 
 // Honeslty not sure if this is a good idea but since its just doing math I hope it is fine.
-static class RandomChance {
+class RandomChance { // Here
 public:
 
 	// Returns true if it hits that percentage

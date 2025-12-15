@@ -48,7 +48,7 @@ private:
 	bool _playerWon = false;
 
 	void GenerateCompetitors();
-	int CalculateTimeScore(int speed);
+	float CalculateTimeScore(int speed);
 
 	int GetRandomInt(int min, int max);
 };

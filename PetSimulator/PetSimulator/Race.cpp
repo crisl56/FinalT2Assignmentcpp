@@ -108,7 +108,7 @@ void Race::GenerateCompetitors()
     }
 }
 
-int Race::CalculateTimeScore(int speed)
+float Race::CalculateTimeScore(int speed)
 {
     if (speed <= 0)
     {

@@ -286,6 +286,11 @@ int Pet::GetThirstiness() const
 	return _thirstiness;
 }
 
+int Pet::GetSpeed() const // I created the getspeed function since there wasn't in your previous commit
+{
+	return _speed;
+}
+
 Pet::Mood Pet::GetMood() const
 {
 	return _currentMood;

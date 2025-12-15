@@ -20,7 +20,8 @@ public:
 	void ShowPetDeadOptions(const Pet& _pet);
 
 	string AskString(const string& message);
-	InputType AskInt(const string& message, int min, int max);
+	InputType AskMenuGameOption(const string& message, int min, int max);
+	int AskInt(const string& message, int min, int max);
 
 	void ClearConsole();
 	void PressToContinue();

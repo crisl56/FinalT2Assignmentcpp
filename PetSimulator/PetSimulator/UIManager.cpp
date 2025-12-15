@@ -1,5 +1,5 @@
 #include <vector>
-#include <format>
+//#include <format>
 #include "Utils.h"
 #include "UIManager.h"
 #include "Pet.h"
@@ -13,7 +13,7 @@ std::shared_ptr<UIManager> UIManager::GetInstance() {
 		return sInstance;
 	}
 
-	sInstance = std::make_shared<UIManager>();
+	sInstance = std::shared_ptr<UIManager>(new UIManager()); // Change here 
 	return sInstance;
 }
 
@@ -32,7 +32,7 @@ void UIManager::ShowPetStats(const Pet& _pet)
 {
 	LOG_LN("\n=================================== \n" << 
 		     _pet.GetName() << "'s Stats\n" <<
-	         "===================================" <<
+	         "===================================\n" <<
 			 "Energy      :" << _pet.GetEnergy()     << "\n" <<
 			 "Dirtiness   :" << _pet.GetCleanState()  << "\n" <<
 			 "Health      :" << _pet.GetHealth()     << "\n" <<
@@ -48,7 +48,7 @@ void UIManager::ShowGameOptions(const Pet& _pet)
 {
 	LOG_LN("\n=================================== \n" <<
 			"----------- Pet Options -----------  \n" <<
-			"===================================    " <<
+			"===================================  \n" <<
 			"1. Feed     " << _pet.GetName() << "\n" <<
 			"2. Hydrate  " << _pet.GetName() << "\n" <<
 			"3. Clean    " << _pet.GetName() << "\n" <<
@@ -146,15 +146,21 @@ string UIManager::AskString(const string& message)
 	}
 }
 
-InputType UIManager::AskInt(const string& message, int min, int max)
+InputType UIManager::AskMenuGameOption(const string& message, int min, int max)
 {
 	string input;
 	int value = 0;
 	InputAction CurrentInputAction;
 	std::cin >> (CurrentInputAction);
 	return CurrentInputAction.mInputKey;
+}
 
-	/*while (true)
+int UIManager::AskInt(const string& message, int min, int max)
+{
+	string input;
+	int value = 0;
+
+	while (true)
 	{
 		LOG_LN(message);
 		std::getline(std::cin, input);
@@ -173,7 +179,7 @@ InputType UIManager::AskInt(const string& message, int min, int max)
 		{
 			LOG_LN("Invalid number, try again.\n");
 		}
-	}*/
+	}
 }
 
 void UIManager::PressToContinue()
@@ -206,4 +212,6 @@ void UIManager::ShowPetActionDialogue(const std::vector<string>& dialogue)
 
 	PressToContinue();
 }
+
+UIManager::UIManager() = default; // Change here
 

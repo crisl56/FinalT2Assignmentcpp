@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLoop.cpp" />
+    <ClCompile Include="InputAction.cpp" />
     <ClCompile Include="Pet.cpp" />
     <ClCompile Include="PetDialogue.cpp" />
     <ClCompile Include="PetFactory.cpp" />
